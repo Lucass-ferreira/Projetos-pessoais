@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  background: #f4f6f8;
+
+  /* height: 100vh; */
+  padding: 20px;
+  min-width: 50vw;
+}
+
+h1{
+  font-size: 120px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+/* Parte Cartão */
+.div-cartao {
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+  /* display: flex; */
+  /* justify-content: space-around;
+  align-items: center; */
+}
+
+.div-cartao a {
+  /* padding: 30px; */
+  text-decoration: none;
+  color: black;
+}
+
+.cartao {
+  padding: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Parte Assinaturas */
+
+.main-assinaturas{
+  padding-top: 40px;
+}
+
+#tabela-compras{
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 74px;
+  margin-bottom: 100px;
+}
+
+tr, th, td{
+  border: 2px solid black;
+  padding: 15px 25px;
+}
+
+label {
+  font-size: .75em;
+}
+
+input, button {
+  font-size: 1em;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.assinaturas-adicao{
+  margin-top: 40px;
+}
+
+.botao{
+  margin-top: 40px;
+  font-size: .75em;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.form-botao {
+  display: flex;
+  justify-content: center;
+}
