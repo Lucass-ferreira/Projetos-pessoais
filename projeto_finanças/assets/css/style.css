@@ -172,7 +172,7 @@ form button{
 
 /* ============================= */
 /* 📱 CELULAR */
-@media (max-width:768px){
+@media (max-width:900px){
 
   body{
     padding:10px;
