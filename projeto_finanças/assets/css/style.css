@@ -13,8 +13,13 @@ body{
 
 /* CONTAINER CENTRAL */
 .container{
-  max-width:1200px;
-  margin:auto;
+  max-width:100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input, select{
+  font-size:16px;
 }
 
 /* HEADER */
@@ -173,6 +178,12 @@ form button{
     padding:10px;
   }
 
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
   h1{
     font-size:18px;
   }
@@ -181,25 +192,32 @@ form button{
     flex-direction:column;
   }
 
-  th:nth-child(3),
-  td:nth-child(3){
-    display:none;
+  .total{
+    flex-direction:column;
+    gap:5px;
+    font-size:16px;
   }
 
-  th:nth-child(1),
-  td:nth-child(1){
-    display:none;
+  form{
+    display:flex;
+    flex-direction:column;
   }
 
   th,td{
-    font-size:14px;
-    padding:10px;
+    font-size:13px;
+    padding:8px;
   }
 
-  .total{
-    font-size:16px;
+  /* deixa tabela scrollável */
+  .tabela{
+    overflow-x:auto;
+  }
+
+  table{
+    min-width:500px;
   }
 }
+
 
 /* ============================= */
 /* 📲 TABLET */
