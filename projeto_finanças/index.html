@@ -4,65 +4,84 @@
     <meta charset="UTF-8" />
     <title>Controle de Finanças</title>
     <meta name="viewport" content="width=device-width, initial-scale=.0" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<h1>Controle de Finanças</h1>
+    <div class="container">
 
-<div class="main-cartao">
-    <h2>Cartões:</h2>
+    <header>
+        <h1>Controle de Finanças</h1>
+        <button class="btn-add">+</button>
+    </header>
 
-    <div class="div-cartao"> 
-        <a href="nubank.html" class="cartao" style="background-color: blueviolet;">Nubank</a>
-        <a href="mercado_pago.html" class="cartao" style="background-color: gold;">Mercado Pago</a> 
-        <a href="santander.html" class="cartao" style="background-color: brown;">Santander</a> 
-    </div>
-</div>
+    <section class="cards">
+        <div class="card nubank"><a href="nubank.html">Nubank</a></div>
+        <div class="card mercado"><a href="mercado_pago.html">Mercado Pago</a></div>
+        <div class="card santander"><a href="santander.html">Santander</a></div>
+    </section>
 
-<div class="main-assinaturas">
-    <h2>Assinaturas:</h2>
-
-      <table id="tabela-compras">
+    <section class="tabela">
+        <table>
         <thead>
             <tr>
-                <th>Data</th>
-                <th>Descrição</th>
-                <th>Cartão</th>
-                <th>Valor (R$)</th>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Cartão</th>
+            <th id="th_valor">Valor</th>
+            <th></th>
             </tr>
         </thead>
-
         <tbody>
             <tr>
-                <td>23/02/25</td>
-                <td>Netflix</td>
-                <td>Nubank</td>
-                <td>R$ 20,90</td>
+            <td>23/02/25</td>
+            <td>Netflix</td>
+            <td>Nubank</td>
+            <td class="valor">R$ 20,90</td>
+            <td class="lixeira">🗑️</td>
             </tr>
-            
+
             <tr>
-                <td>18/09/25</td>
-                <td>Meli+</td>
-                <td>Nubank</td>
-                <td>R$ 19,90</td>
+            <td>18/09/25</td>
+            <td>Meli+</td>
+            <td>Nubank</td>
+            <td class="valor">R$ 19,90</td>
+            <td class="lixeira">🗑️</td>
             </tr>
-
         </tbody>
-    </table>
+        </table>
+    </section>
 
-    <form action="" method="get" class="assinaturas-adicao">
-        <p><label>Data: <input type="date" name="data" id=""></label></p>
-        <p><label>Descrição: <input type="text" name="data" id=""></label></p>
-        <p><label>Cartão: <input type="text" name="data" id=""></label></p>
-        <p><label>Valor (R$): <input type="number" name="data" id=""></label></p>
+    <section class="total">
+        <span>Total Nubank:</span>
+        <strong>R$ 40,80</strong>
+    </section>
 
-        <div class="form-botao">
-            <button class="botao" type="reset">Limpar</button> <button class="botao" type="submit">Adicionar</button>
+    <section class="formulario">
+        <h2>Adicionar Assinatura</h2>
+
+        <form>
+        <input type="text" placeholder="DD/MM/AAAA" maxlength="10" inputmode="numeric" min="2000-01-01" max="2100-12-31" required>
+        <input type="text" placeholder="Descrição" maxlength="30" required>
+
+        <select required>
+            <option value="">Selecione o cartão</option>
+            <option>Nubank</option>
+            <option>Mercado Pago</option>
+            <option>Santander</option>
+        </select>
+
+        <input type="text" placeholder="Valor (R$)" required>
+
+        <div class="botoes">
+            <button type="reset" class="limpar">Limpar</button>
+            <button type="submit" class="adicionar">Adicionar</button>
         </div>
-    </form>
-</div>
+        </form>
+    </section>
+
+    </div>
 
   <script src="assets/javascript/script.js"></script>
 
