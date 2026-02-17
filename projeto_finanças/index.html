@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Controle de Finanças</title>
-    <meta name="viewport" content="width=device-width, initial-scale=.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -11,15 +11,23 @@
 
     <div class="container">
 
-    <header>
+    <header class="topo">
         <h1>Controle de Finanças</h1>
-        <button class="btn-add">+</button>
     </header>
 
-    <section class="cards">
-        <div class="card nubank"><a href="nubank.html">Nubank</a></div>
-        <div class="card mercado"><a href="mercado_pago.html">Mercado Pago</a></div>
-        <div class="card santander"><a href="santander.html">Santander</a></div>
+    <section class="secao-cartoes">
+        <div class="titulo-cartoes">
+            <h2>Cartões:</h2>
+        </div>
+        
+        <div class="cards" id="lista-cartoes">
+            <a href="cartao.html?id=0" class="card nubank">Nubank</a>
+            <a href="cartao.html?id=1" class="card mercado">Mercado Pago</a>
+            <a href="cartao.html?id=2" class="card santander">Santander</a>
+
+            <button class="card add-card" id="btn-add">+</button>
+        </div>
+
     </section>
 
     <section class="tabela">
@@ -28,41 +36,27 @@
             <tr>
             <th>Data</th>
             <th>Descrição</th>
-            <th>Cartão</th>
+            <th>Cartão</th> 
             <th id="th_valor">Valor</th>
             <th></th>
-            </tr>
         </thead>
-        <tbody>
-            <tr>
-            <td>23/02/25</td>
-            <td>Netflix</td>
-            <td>Nubank</td>
-            <td class="valor">R$ 20,90</td>
-            <td class="lixeira">🗑️</td>
-            </tr>
 
-            <tr>
-            <td>18/09/25</td>
-            <td>Meli+</td>
-            <td>Nubank</td>
-            <td class="valor">R$ 19,90</td>
-            <td class="lixeira">🗑️</td>
-            </tr>
+        <tbody>
         </tbody>
+
         </table>
     </section>
 
     <section class="total">
         <span>Total Nubank:</span>
-        <strong>R$ 40,80</strong>
+        <strong></strong>
     </section>
 
     <section class="formulario">
         <h2>Adicionar Assinatura</h2>
 
         <form>
-        <input type="text" placeholder="DD/MM/AAAA" maxlength="10" inputmode="numeric" min="2000-01-01" max="2100-12-31" required>
+        <input type="text" placeholder="DD/MM/AA" maxlength="10" inputmode="numeric" min="2000-01-01" max="2100-12-31" required>
         <input type="text" placeholder="Descrição" maxlength="30" required>
 
         <select required>

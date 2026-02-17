@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/estilo_pag.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="topo">
+            <h1 id="titulo-cartao"></h1>
+        </header>
+
+        <section class="tabela">
+            <table id="tabela-compras">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Tipo</th>
+                        <th>Valor (R$)</th>
+                        <th>Parcelas</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+
+            </table>
+        </section>
+        
+        <section class="total">
+            <span>Total:</span>
+            <strong>R$ 0,00</strong>
+        </section>
+
+
+        <section class="formulario">
+            <h2>Adicionar Compra</h2>
+
+            <form>
+                <input type="text" placeholder="DD/MM/AA" maxlength="10">
+                <input type="text" placeholder="Descrição">
+                <select id="tipo" required>
+                    <option value="">Selecione o tipo</option>
+                    <option>Crédito</option>
+                    <option>Débito</option>
+                    <option>Pix</option>
+                </select>
+                
+                <input type="text" placeholder="Valor (R$)">
+                <input type="number" placeholder="Parcelas">
+
+
+                <div class="botoes">
+                    <button type="reset" class="limpar">Limpar</button>
+                    <button type="submit" class="adicionar">Adicionar</button>
+                </div>
+            </form>
+        </section>
+
+        <a href="index.html" class="card mercado" style="display:inline-block;margin-top:20px;">
+            ← Voltar
+        </a>
+        
+    </div>
+
+    <!-- <script src="assets/javascript/script.js"></script> -->
+    <script src="assets/javascript/script_pag.js"></script>
+
+</body>
+
+</html>
+

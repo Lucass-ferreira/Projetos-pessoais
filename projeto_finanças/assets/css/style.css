@@ -13,7 +13,7 @@ body{
 
 /* CONTAINER CENTRAL */
 .container{
-  max-width:100%;
+  width:100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -45,30 +45,91 @@ h1{
   cursor:pointer;
 }
 
+/* CARTÕES */
+.topo h1{
+  width:100%;
+}
+
+.titulo-cartoes{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.titulo-cartoes h2{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.secao-cartoes{
+  margin-bottom:25px;
+  background:#181820;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #2a2a35;
+}
+
+.add-card{
+  background:#22222c;
+  color:#7b2cff;
+  border:2px dashed #7b2cff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.add-card:hover{
+  background:#7b2cff;
+  color:white;
+}
+
+.card.extra {
+    background: linear-gradient(135deg, #444, #222);
+    color: white;
+}
+
+.remover-cartao {
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.remover-cartao:hover {
+    background: red;
+    color: white;
+}
+
+.dynamic-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* CARDS */
 .cards{
   display:flex;
   gap:15px;
-  margin-bottom:20px;
   flex-wrap:wrap;
+  cursor: pointer;
+}
+
+.cards a {
+  text-decoration: none;
 }
 
 .card{
-  padding:12px 20px;
+  padding:14px 18px;
   border-radius:12px;
   font-weight:bold;
 }
 
-.card a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  padding: 12px;
-}
-
-.nubank{background:#7b2cff;}
+.nubank{background:#7b2cff; color:white}
 .mercado{background:#ffc107;color:#000;}
-.santander{background:#c62828;}
+.santander{background:#c62828;color:white}
 
 /* TABELA */
 .tabela{
@@ -94,20 +155,67 @@ th,td{
 th{
   background:#22222c;
   font-size:14px;
+  text-align:center;
+}
+
+/* Data, Descrição e Tipo à esquerda */
+th:nth-child(1),
+th:nth-child(2),
+th:nth-child(3),
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3){
+  text-align:left;
 }
 
 tr{
   border-bottom:1px solid #2a2a35;
 }
 
+td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(.valor){
+  text-align:center;
+}
+
 .valor{
-  text-align:right;
+  text-align:right  !important;
   font-weight:bold;
 }
 
 .lixeira{
   text-align:center;
   cursor:pointer;
+
+  color: #ff4d4d;
+}
+
+.acoes{
+  display:flex;
+  gap: 10px;
+  justify-content:center;
+}
+
+.acoes button {
+  background: #1e1e2f;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.acoes button:hover {
+  transform: scale(0.95);
+}
+
+.editar{
+  cursor:pointer;
+  color: #4da6ff;
+}
+
+.editar:hover{
+  transform:scale(1.2);
 }
 
 /* TOTAL */
@@ -170,12 +278,28 @@ form button{
   color:#fff;
 }
 
+.formulario.editando {
+    border: 2px solid #f39c12;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.4);
+    transition: 0.3s;
+}
+
+.adicionar.atualizando {
+    background-color: #f39c12;
+    color: white;
+}
+
 /* ============================= */
 /* 📱 CELULAR */
-@media (max-width:900px){
+@media (max-width:600px){
 
   body{
     padding:10px;
+  }
+
+  .container {
+    height:100%;
+    overflow:hidden;
   }
 
   header{
@@ -185,7 +309,7 @@ form button{
   }
 
   h1{
-    font-size:18px;
+    font-size:38px;
   }
 
   .cards{
@@ -204,17 +328,31 @@ form button{
   }
 
   th,td{
-    font-size:13px;
-    padding:8px;
+    font-size:16px;
+    padding:7px;
   }
 
-  /* deixa tabela scrollável */
   .tabela{
-    overflow-x:auto;
+    overflow-x:unset;
   }
 
   table{
-    min-width:500px;
+    min-width:100%;
+    font-size: 12px;
+  }
+
+  th, td{
+    padding:6px;
+  }
+
+  .acoes {
+    gap: 15px;
+  }
+
+  .acoes button {
+    font-size: 18px;
+    min-width: 45px;
+    min-height: 45px;
   }
 }
 
